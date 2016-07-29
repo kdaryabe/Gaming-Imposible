@@ -1,0 +1,108 @@
+"Gaming Impossible" by Kaveh Daryabeygi
+
+When play begins, say "[italic type]Finally my brother is gone and I can use his XBOX ONE to play some games. [line break]He never allows me to go anywhere near his stuff. [line break] I guess I am too young to be playing the games he plays.[line break] Today I will be victorius![line break]"
+
+
+The Livingroom is a room. 
+The description of the room is "This room is very high tech."
+
+A set of Gaming headset is in the LIvingroom. 
+The description of the Gaming headsets is "MLG approved Turttle Beach Earforce SEVEN."
+
+The drawer is in the Livingroom. It is fixed in place.
+The drawer is a openable container. The drawer can be open or closed.
+The description of the drawer is "There are lots of junk in here, but no key."
+
+There are many items in the drawer.
+
+Understand "headset" as Gaming headset.
+
+Before taking the Gaming headset:
+	say "Your brother won't like it if you use his stuff.";
+	continue the action.
+	
+A bookshelf is in the Livingroom.
+
+There is a candy jar on the bookshelf. The candy jar can be destroyed once dropped. The candy jar is a closed openable container. The candy jar can be open or closed. 
+The description of the candy jar is "I wonder what could be in there?"
+
+Instead of climbing bookshelf:
+	say "No way I can get up there that easy."
+
+
+A chair is here. A chair is a supporter. A chair is fixed in place.
+The description of the chair is "This chair might do the trick."
+
+The kitchen is north of the Livingroom.
+The description of the kitchen is "There is a dining table."
+	
+	
+Instead of taking candy jar:
+	if  player has candy jar:
+		now player has candy jar;
+	otherwise:
+		say "I can't reach that high.";
+	
+Instead of climbing the chair:
+	now player has candy jar;
+	say "Now you have the: [candy jar][line break] ";
+	
+A key is inside the candy jar. It unlocks the black door.
+
+Instead of dropping the candy jar:
+	if dropping candy jar:
+		now player has key;
+		say "The candy jar shatters into a hundred pieces and there is a key amongs them. Now I have the [key]."
+	
+A table is here. A table is a supporter.
+A knife is on the table.
+
+Instead of taking knife:
+	say "you can't reach it."
+
+Instead of climbing the table:
+	now player has knife; 
+	say "I don't think using the [knife] to open the door is a good idea.".
+	
+The black door is east of the Livingroom and west of the Gaming room. The black door can be locked or unlocked. The black door is a locked door. The black door has an object called a matching key.
+
+The description of the Gaming room is "There is technology everywhere."
+There is Gaming station in the Gaming room. The Gaming station is a supporter. 
+
+The XBOX ONE is on the Gaming station. The XBOX ONE is switched off. The XBOX ONE can be switched on or switched off.
+The description of the XBOX ONE is "A brand new Day one Edition XBOX ONE."
+		
+Instead of switching on:
+	say "Oh yeah baby here we go.[line break]"
+			
+Understand "xbox" as XBOX ONE.
+
+Instead switching off:
+	if candy jar is open:
+		say "[line break]Your brother will never find out what you did.[line break][line break]";
+		end the story saying "You got away with it";
+	otherwise:
+		say "[line break]Your brother will know what you did, but I think it was worth it.[line break][line break]";
+		end the story saying "You got cought.";
+		
+
+When play ends, say "Thanks for playing!"
+
+Test win with "look / x chair / x bookshelf / climb chair / x candy jar / open jar / take key / go east / open door with key / open door / go east / x xbox / switch xbox on / switch xbox off".
+
+Test lose with "look / x chair / x bookshelf / climb chair / x candy jar / drop jar / go east / open door with key / go east / x xbox / switch xbox on / switch xbox off".
+
+Release along with cover art, the source text, an interpreter, and a website.
+
+
+
+
+
+
+
+
+
+
+
+
+
